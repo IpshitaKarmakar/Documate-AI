@@ -65,7 +65,7 @@ Follow these steps to create a virtual environment using Anaconda:
 	1.	Open the Anaconda Prompt.
 	2.	Create a new environment:
 
-conda create --name documate_ai=3.9
+conda create --name documate_ai python=3.9
 
 (Replace documate_ai with your preferred environment name if desired).
 
