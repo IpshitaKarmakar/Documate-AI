@@ -33,13 +33,43 @@ Docker: Containerization platform to ensure portability and consistency across d
 Streamlit: Framework for building an interactive and user-friendly web interface.
 
 Installation
-
+Make sure you are preinstalled ollama 3.2, python=3.9 or higher version, docker desktop, anaconda, vs code to run the code and get access for the seamless run of project.
 Follow these steps to set up DocuMate AI on your local machine:
 
 Clone the Repository:
 
 git clone https://github.com/IpshitaKarmakar/DocuMateAI.git
 cd DocuMateAI
+
+Create a Virtual Environment:
+You can either use Python’s venv or Anaconda to create a virtual environment for managing dependencies.
+
+Option 1: Using venv
+
+On Windows:
+
+python -m venv venv
+venv\Scripts\activate
+
+On macOS and Linux:
+
+python3 -m venv venv
+source venv/bin/activate
+
+Option 2: Using Anaconda
+
+Follow these steps to create a virtual environment using Anaconda:
+
+	1.	Open the Anaconda Prompt.
+	2.	Create a new environment:
+
+conda create --name documate_ai=3.9
+
+(Replace documate_ai with your preferred environment name if desired).
+
+	3.	Activate the newly created environment:
+
+conda activate documate_ai
 
 Install Dependencies:
 Use pip to install the required Python packages:
@@ -48,13 +78,15 @@ pip install -r requirements.txt
 
 Run Qdrant in Docker:
 Ensure Docker is installed and running. Start a Qdrant instance using:
-
+docker run -d-p 6333:6333 qdrant/qdrant
 docker run -d -p 6333:6333 qdrant/qdrant
 
 Launch the Application:
 Start the Streamlit app:
 
-streamlit run app.py
+streamlit run new.py 
+or
+python -m streamlit run new.py
 
 Access the Application:
 Open your browser and navigate to http://localhost:8501.
@@ -90,9 +122,16 @@ DocuMateAI/
 ├── README.md             # Project documentation
 └── ...                   # Additional files and resources
 
+Documatation I have used to make this project:
+• Streamlit Documentation: https://docs.streamlit.io/
 
-Acknowledgments
+• LangChain Documentation: https://langchain.readthedocs.io/
 
+• Qdrant Documentation: https://qdrant.tech/documentation/
+
+• ChatOllama Documentation: https://github.com/langchain-ai/langchain-llms#ollama
+
+Acknowledgments:
 Special thanks to the IOCL Kolkata Team for their support and guidance in the development of this project. Additionally, gratitude to the creators of LangChain, Qdrant, and HuggingFace for their amazing open-source tools.
 
 Contact
