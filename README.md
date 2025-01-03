@@ -34,11 +34,13 @@ Streamlit: Framework for building an interactive and user-friendly web interface
 
 Installation
 Make sure you are preinstalled ollama 3.2, python=3.9 or higher version, docker desktop, anaconda, vs code to run the code and get access for the seamless run of project.
+
 Follow these steps to set up DocuMate AI on your local machine:
 
 Clone the Repository:
 
 git clone https://github.com/IpshitaKarmakar/DocuMateAI.git
+
 cd DocuMateAI
 
 Create a Virtual Environment:
@@ -78,7 +80,9 @@ pip install -r requirements.txt
 
 Run Qdrant in Docker:
 Ensure Docker is installed and running. Start a Qdrant instance using:
+
 docker run -d-p 6333:6333 qdrant/qdrant
+
 docker run -d -p 6333:6333 qdrant/qdrant
 
 Launch the Application:
@@ -132,6 +136,7 @@ Documatation I have used to make this project:
 • ChatOllama Documentation: https://github.com/langchain-ai/langchain-llms#ollama
 
 Acknowledgments:
+
 Special thanks to the IOCL Kolkata Team for their support and guidance in the development of this project. Additionally, gratitude to the creators of LangChain, Qdrant, and HuggingFace for their amazing open-source tools.
 
 Contact
